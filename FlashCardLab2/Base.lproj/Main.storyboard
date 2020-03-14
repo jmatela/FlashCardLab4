@@ -39,12 +39,28 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPY-7M-P3y">
-                                <rect key="frame" x="192" y="740" width="30" height="66"/>
+                                <rect key="frame" x="192" y="814" width="30" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <segue destination="oHr-Am-Voo" kind="presentation" id="QgW-kX-hFJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7g-bZ-x0t">
+                                <rect key="frame" x="55" y="832" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oii-ym-QpZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBj-cE-Pwf">
+                                <rect key="frame" x="336" y="832" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enO-ha-EoX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,6 +75,8 @@
                     <connections>
                         <outlet property="BacklabelAnswer" destination="Oc4-eB-nii" id="gaq-2c-ZtE"/>
                         <outlet property="FrontlabelQuestion" destination="13s-uP-lhq" id="8Ws-ts-gzQ"/>
+                        <outlet property="nextButton" destination="IBj-cE-Pwf" id="8bH-Zc-BAx"/>
+                        <outlet property="prevButton" destination="N7g-bZ-x0t" id="r8r-kY-ouN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
