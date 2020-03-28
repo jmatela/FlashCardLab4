@@ -2,7 +2,7 @@
 ## Lab 4
 
 ### App Description
-This is to view the answer for cooking egg.
+This is to view the answer for cooking egg on a flashcard.
 
 ### App Walk-though
 
