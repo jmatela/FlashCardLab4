@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         UpdateFlashcard(question: "How many calories are there in a boiled egg?", answer: "76 calories")
         } else {
             updatelabels() //comment
-            updatenextprevButtons()
+            updatenextprevButtons() //more comments...
     }
     }
     @IBAction func DidTapOnFlashcard(_ sender: Any) {FrontlabelQuestion.isHidden = !FrontlabelQuestion.isHidden
