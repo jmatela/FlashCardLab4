@@ -38,27 +38,28 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPY-7M-P3y">
-                                <rect key="frame" x="192" y="814" width="30" height="66"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPY-7M-P3y">
+                                <rect key="frame" x="169" y="815" width="76" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+" image="addButton"/>
                                 <connections>
                                     <segue destination="oHr-Am-Voo" kind="presentation" id="QgW-kX-hFJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7g-bZ-x0t">
-                                <rect key="frame" x="55" y="832" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7g-bZ-x0t">
+                                <rect key="frame" x="20" y="815" width="101" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prev"/>
+                                <state key="normal" title="Prev" image="arrowLeft"/>
+                                <state key="disabled" image="arrowLeftDisabled"/>
                                 <connections>
                                     <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oii-ym-QpZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBj-cE-Pwf">
-                                <rect key="frame" x="336" y="832" width="32" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBj-cE-Pwf">
+                                <rect key="frame" x="301" y="815" width="102" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Next" image="arrowRight"/>
+                                <state key="disabled" image="arrowRightDisabled"/>
                                 <connections>
                                     <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enO-ha-EoX"/>
                                 </connections>
@@ -75,6 +76,7 @@
                     <connections>
                         <outlet property="BacklabelAnswer" destination="Oc4-eB-nii" id="gaq-2c-ZtE"/>
                         <outlet property="FrontlabelQuestion" destination="13s-uP-lhq" id="8Ws-ts-gzQ"/>
+                        <outlet property="card" destination="fWo-ah-iw4" id="gza-kq-pkY"/>
                         <outlet property="nextButton" destination="IBj-cE-Pwf" id="8bH-Zc-BAx"/>
                         <outlet property="prevButton" destination="N7g-bZ-x0t" id="r8r-kY-ouN"/>
                     </connections>
@@ -86,7 +88,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="465" y="143"/>
+            <point key="canvasLocation" x="463.768115942029" y="142.63392857142856"/>
         </scene>
         <!--Creation View Controller-->
         <scene sceneID="9ru-1f-OC2">
@@ -157,4 +159,11 @@
             <point key="canvasLocation" x="1198.5507246376812" y="142.63392857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addButton" width="64" height="64"/>
+        <image name="arrowLeft" width="64" height="64"/>
+        <image name="arrowLeftDisabled" width="64" height="64"/>
+        <image name="arrowRight" width="64" height="64"/>
+        <image name="arrowRightDisabled" width="64" height="64"/>
+    </resources>
 </document>

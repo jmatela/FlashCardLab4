@@ -36,9 +36,13 @@ class ViewController: UIViewController {
     }
     }
     @IBAction func DidTapOnFlashcard(_ sender: Any) {FrontlabelQuestion.isHidden = !FrontlabelQuestion.isHidden
-        
     }
     
+    func flipFlashcard()
+    {FrontlabelQuestion.isHidden = !FrontlabelQuestion.isHidden
+        UIView.transition(with:card, duration:0.3, options: UIView.AnimationOptions .transitionFlipFromRight, animations: {self.FrontlabelQuestion.isHidden = !self.FrontlabelQuestion.isHidden
+        })
+    }
     func UpdateFlashcard(question:String, answer:String) {
         let flashcard = Flashcard (question: question, answer: answer)
         // Adding flashcard in the flashcards array
@@ -94,10 +98,13 @@ print (currentIndex)
     
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var card: UIView!
     @IBAction func didTapOnNext(_ sender: Any) {
         //Increase current index
         currentIndex = currentIndex + 1
+       
         updatelabels()
+        animateCardOut()
         updatenextprevButtons()
     }
     @IBAction func didTapOnPrev(_ sender: Any) {
@@ -105,8 +112,9 @@ print (currentIndex)
         currentIndex = currentIndex - 1
        
        updatelabels()
+        animateCardOut()
     updatenextprevButtons()
-        
+       
     }
     
     func saveAllFlashcardsToDisk() {
@@ -129,4 +137,23 @@ print (currentIndex)
             }
         
 }
+
+func animateCardOut(){
+    UIView.animate(withDuration:0.3, animations:{ self.card.transform = CGAffineTransform.identity.translatedBy(x:-300.0, y:0.0)}, completion: {finished in
+        
+        self.updatelabels()
+        
+        self.animateCardIn()
+        
+    })
+}
+func animateCardIn(){
+    
+    card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+    UIView.animate(withDuration:0.3){
+        self.card.transform=CGAffineTransform.identity
+ 
+    }
+}
+
 }
