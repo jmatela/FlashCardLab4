@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         if flashcards.count == 0 {
         UpdateFlashcard(question: "How many calories are there in a boiled egg?", answer: "76 calories")
         } else {
-            updatelabels()
+            updatelabels() //comment
             updatenextprevButtons()
     }
     }
